@@ -1,12 +1,4 @@
-menu:
-# - {name: 'courses', url: '/courses'}
-- {name: 'About', url: '/'}
-- {name: 'Publications', url: '/publications'}
-# - {name: 'Video Gallery', url: '/video_gallery'}
-# - {name: 'contact', url: '/contact'}
-
-social:
-- {icon: 'github', link: 'https://github.com/chengh-wang'}
-- {icon: 'twitter', link: 'https://x.com/330781570'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/chenghao-wang-01a036203/'}
-- {icon: 'googleScholar', link: 'https://scholar.google.es/citations?hl=en&user=Vlx-PYwAAAAJ'}
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Chenghao Wang" # the name of your site, e.g. ACME Corp.
+description: ""
