@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Video Gallery | Chenghao Wang</title>
+  <link rel="stylesheet" href="/assets/libs/bootstrap/bootstrap.min.css">
+  <script defer src="/assets/libs/fontawesome/all.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/M.png">
+  <link rel="shortcut icon" href="/assets/M.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
+  <div>
+    <!-- <a href="/" class="d-flex align-items-center text-decoration-none"> -->
+      <span class="fs-2 fw-bold">Chenghao Wang</span>
+    <!-- </a> -->
+    <a href="/" class="d-flex align-items-center text-decoration-none">
+      <span></span>
+    </a>
+  </div>
+  <nav class="d-inline-flex mt-2 mt-md-2 ms-md-auto">
+    
+      <a class="me-3 fs-5 py-2 fw-bold text-decoration-none" href="/">About</a>
+    
+      <a class="me-3 fs-5 py-2 fw-bold text-decoration-none" href="/publications">Publications</a>
+    
+  </nav>
+</header>
+
+      <div class="row g-5 mb-5">
+    <div>
+      <!-- <h3 class="fw-bold border-bottom pb-3 mb-5">Publications</h3> -->
+      <p>As a roboticist, I like working with robots—not only researching them, but also building them from the ground up. While hardware may not always be the immediate answer, it is a fundamental pathway to solving the crucial problems from the first principles.</p>
+      <p>“Everything around you that you call life was made up by people that were no smarter than you and you can change it, you can influence it, you can build your own things that other people can use.”</p>
+      <!-- <h3 class="fw-bold mt-5"></h3> -->
+      <h3 class="border-bottom fw-bold mt-5"></h3>
+      <!-- Embedded Video Section -->
+      <h3 class="fw-bold mt-2">Projects</h3>
+      <br>
+
+  <div class="row align-items-center mb-5">
+      <!-- Project 1: Husky -->
+    <h3 class="fw-bold mt-2 fs-4">
+        Husky <span class="fw-normal">[2021-now]</span>
+    </h3>
+    <!-- Video Column -->
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/ACFnsOFqVyw" 
+                title="Husky Carbon Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <!-- Text Column -->
+    <div class="col-md-6">
+      <p>
+        The Husky family of robots comprises the Husky Carbon (Video here) and Husky Beta (Release soon!!) platforms—both designed to seamlessly integrate dynamic legged locomotion and aerial mobility within a single framework. Husky Carbon uses custom-made actuators and mounts its propellers on top of the torso, enabling direct vertical takeoff from a standing position. By contrast, Husky Beta employs off-the-shelf servo motors and places its propellers at the knees; to transition to flight mode, it must first sit down, rotate its legs outward, and orient the propellers for takeoff. Despite their distinct takeoff approaches, both platforms share the core objective of unifying the versatility of multi-modal locomotion, demonstrating advanced capabilities such as thrust-vectoring, push recovery, and posture manipulation during aerial modes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Project 2: Bipedal Walker -->
+  <div class="row align-items-center mb-5">
+    <h3 class="fw-bold mt-2 fs-4">Modeling and Simulation of a Planar, Bipedal Walker Using Hybrid Zero Dynamics</h3>
+    <!-- Video Column -->
+    <div class="col-md-6 order-md-1 order-2">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/lVvWOyCiHmM" 
+                title="Bipedal Walker Simulation Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <!-- Text Column -->
+    <div class="col-md-6 order-md-2 order-1">
+      <p>
+        This project demonstrates how to achieve stable bipedal walking in a planar, three-link robot using Hybrid Zero Dynamics (HZD) control. The design process begins with forward kinematics, which map joint angles to the positions and velocities of key points, and proceeds to derive equations of motion using the Euler–Lagrange formalism. A hybrid model then combines single-support, swing, and impact dynamics, ensuring the stance leg and impact events are accounted for. To reduce the complexity of gait optimization, the approach focuses on zero dynamics, parameterizing the robot’s angles with Bezier polynomials and tuning the resulting coefficients via an energy-minimizing cost function. Finally, a PD controller with feedback linearization drives the robot’s actual trajectory toward the zero-dynamics manifold, yielding a robust, periodic gait in simulation.
+      </p>
+    </div>
+  </div>
+
+  <!-- Project 3: Turtlebot Rescue Mission -->
+  <div class="row align-items-center mb-5">
+    <!-- Video Column -->
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/PYJhLU-gv80" 
+                title="Turtlebot Rescue Mission Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <!-- Text Column -->
+    <div class="col-md-6">
+      <h3 class="fw-bold mt-2 fs-4">Turtlebot Rescue Mission</h3>
+      <p>
+        This project integrates the explore_lite and apriltag_ros packages on a TurtleBot equipped with a Raspberry Pi camera to autonomously explore unknown environments and detect AprilTags. Both the camera driver and tag-detection nodes are run on the robot to reduce latency, while gmapping and move_base handle mapping and navigation. Coordinate frames are aligned via static transforms for accurate tag pose estimation, and explore_lite generates exploration targets so the robot systematically covers the area. Tests in Gazebo validated the setup, and in a physical environment with 15 tags, the robot successfully detected and reported the pose of 11 tags in map coordinates.
+      </p>
+    </div>
+  </div>
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/-ngxHll-Obw" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/_bKyQGg0-eE" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+      <footer class="pt-5 my-5 text-muted border-top">
+  <div class="row">
+    <div class="col-md-7 text-end social-media-icons">
+      
+        <a href="https://github.com/chengh-wang" class="ms-3 fs-5"><i class="fab fa-github"></i></a>
+      
+        <a href="https://x.com/330781570" class="ms-3 fs-5"><i class="fab fa-twitter"></i></a>
+      
+        <a href="https://www.linkedin.com/in/chenghao-wang-01a036203/" class="ms-3 fs-5"><i class="fab fa-linkedin"></i></a>
+      
+        <a href="https://scholar.google.es/citations?hl=en&user=Vlx-PYwAAAAJ" class="ms-3 fs-5"><i class="fab fa-googleScholar"></i></a>
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

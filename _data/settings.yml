@@ -1,0 +1,27 @@
+menu:
+# - {name: 'courses', url: '/courses'}
+- {name: 'About', url: '/'}
+- {name: 'Publications', url: '/publications'}
+# - {name: 'Video Gallery', url: '/video_gallery'}
+# - {name: 'contact', url: '/contact'}
+
+social:
+- {icon: 'github', link: 'https://github.com/chengh-wang'}
+- {icon: 'twitter', link: 'https://x.com/330781570'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/chenghao-wang-01a036203/'}
+- {icon: 'googleScholar', link: 'https://scholar.google.es/citations?hl=en&user=Vlx-PYwAAAAJ'}
+
+# people:
+# - {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
+# - {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
+# - {name: 'Graduate Student', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
+
+# courses:
+# - {name: 'Vector Calculus', url: 'vector-calculus'}
+# - {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
+# - {name: 'Stellar Structures', url: 'stellar-structures'}
+
+
+
+# contacts:
+# - {name: 'Dr. Academia', title: 'Professor', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/contact.jpg'}

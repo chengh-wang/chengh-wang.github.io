@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="row g-5 mb-5">
+  <div class="col-md-6">
+    <h3 class="fw-bold ">About me</h3>
+    {{ content }}
+    {% for item in site.data.settings.social %}
+    <a href="{{ item.link }}" class="ms-5 fs-2"><i class="fab fa-{{ item.icon }}"></i></a>
+    {% endfor %}
+  </div>
+  <div class="col-md-6 text-end">
+    <img src="{{ site.github.url }}/assets/img/IMG_1132.jpg" alt="Home" width="67%">
+  </div>
+</div>
+
+
+
+<div class="row g-5 mb-5">
+  <div class="col-md-12">
+    <h3 class="fw-bold border-bottom pb-3 mb-5">News</h3>
+    <p><b>Dec 11, 2024 -</b> Passed the qualification exam. I am now officially a PhD candidate!</p>
+    <p><b>Sep 9, 2024 -</b> One paper accepted by Humanoid 2024.</p>
+    <p><b>Sep 5, 2024 -</b> One paper accepted by CoRL 2024.</p>
+    <p><b>Jul 13, 2024 -</b> Received student travel award from AIM 2024.</p>
+    <p><b>Apr 21, 2024 -</b> Two paper accepted by AIM 2024.</p>
+    <p><b>Jan 22, 2024 -</b> One paper accepted by ACC 2024.</p>
+  </div>
+</div>
+
+<!-- <div class="row g-5 mb-5">
+  <div class="col-md-12">
+    <h3 class="fw-bold border-bottom pb-3 mb-5">News</h3>
+    <p><b>Dec 11, 2024 -</b> Passed the qualification exam. I am now officially a PhD candidate!</p>
+    <p><b>Sep 9, 2024 -</b> One paper accepted by Humanoid 2024.</p>
+    <p><b>Sep 5, 2024 -</b> One paper accepted by CoRL 2024.</p>
+    <p><b>Jul 13, 2024 -</b> Received student travel award from AIM 2024.</p>
+    <p><b>Apr 21, 2024 -</b> Two paper accepted by AIM 2024.</p>
+    <p><b>Jan 22, 2024 -</b> One paper accepted by ACC 2024.</p>
+  </div>
+</div> -->
+
+{% include publications.html %}
