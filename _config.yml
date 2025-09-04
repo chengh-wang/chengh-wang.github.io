@@ -5,6 +5,8 @@ menu:
 # - {name: 'Video Gallery', url: '/video_gallery'}
 # - {name: 'contact', url: '/contact'}
 
+google_analytics: UA-9N7779GL13
+
 social:
 - {icon: 'github', link: 'https://github.com/chengh-wang'}
 - {icon: 'twitter', link: 'https://x.com/330781570'}
