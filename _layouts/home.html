@@ -3,48 +3,127 @@ layout: default
 ---
 
 <div class="row g-5 mb-5">
-  <div class="col-md-6">
-    <h3 class="fw-bold ">About me</h3>
-    {{ content }}
-    {% for item in site.data.settings.social %}
-    <a href="{{ item.link }}" class="ms-5 fs-2"><i class="fab fa-{{ item.icon }}"></i></a>
-    {% endfor %}
+  <div class="col-md-6 d-flex flex-column justify-content-center">
+    <p class="bio-text">{{ content }}</p>
+    <div class="social-icons">
+      {% for item in site.data.settings.social %}
+      <a href="{{ item.link }}"><i class="fab fa-{{ item.icon }}"></i></a>
+      {% endfor %}
+    </div>
   </div>
   <div class="col-md-6 text-end">
-    <img src="https://raw.githubusercontent.com/chengh-wang/chengh-wang.github.io/main/assets/img/IMG_1132.JPG" alt="Home" width="67%">
+    <img src="https://raw.githubusercontent.com/chengh-wang/chengh-wang.github.io/main/assets/img/IMG_1132.JPG" alt="Chenghao Wang" class="headshot">
   </div>
 </div>
-
-
 
 <div class="row g-5 mb-5">
   <div class="col-md-12">
-    <h3 class="fw-bold border-bottom pb-3 mb-5">News</h3>
-    <p><b>May 18, 2026 -</b> Start my internship at DexAI Lab at Analog Devices (ADI).</p>
-    <p><b>Jan 12, 2026 -</b> Start my internship at Mitsubishi Electric Research Laboratories (MERL).</p>
-    <p><b>June 15, 2025 -</b> Two paper accepted by IROS2025.</p>
-    <p><b>June 5, 2025 -</b> One paper accepted by RA-L.</p>
-    <p><b>May 5, 2025 -</b> Start my internship at Mitsubishi Electric Research Laboratories(MERL).</p>
-    <p><b>Jan 16, 2025 -</b> Three paper accepted by ACC 2025 including one <b>Oral</b>.</p>
-    <p><b>Dec 11, 2024 -</b> Passed the qualification exam. I am now officially a PhD candidate!</p>
-    <p><b>Sep 9, 2024 -</b> One paper accepted by Humanoid 2024.</p>
-    <p><b>Sep 5, 2024 -</b> One paper accepted by CoRL 2024.</p>
-    <p><b>Jul 13, 2024 -</b> Received student travel award from AIM 2024.</p>
-    <p><b>Apr 21, 2024 -</b> Two paper accepted by AIM 2024.</p>
-    <p><b>Jan 22, 2024 -</b> One paper accepted by ACC 2024.</p>
+    <h3 class="section-heading">News</h3>
+    <ul class="news-list" id="news-list">
+      <li><span class="news-date">May 2026</span><span class="news-text">Start my internship at Dexterous AI Group at Analog Devices (ADI).</span></li>
+      <li><span class="news-date">Jan 2026</span><span class="news-text">Start my internship at Mitsubishi Electric Research Laboratories (MERL).</span></li>
+      <li><span class="news-date">Oct 2025</span><span class="news-text">Delivered two oral presentations at IROS 2025, Hangzhou, China (Oct. 22, 2025).</span></li>
+      <li><span class="news-date">Jun 2025</span><span class="news-text">Two papers accepted by IROS 2025.</span></li>
+      <li><span class="news-date">Jun 2025</span><span class="news-text">One paper accepted by RA-L.</span></li>
+      <li><span class="news-date">May 2025</span><span class="news-text">Start my internship at Mitsubishi Electric Research Laboratories (MERL).</span></li>
+      <li class="news-extra"><span class="news-date">Jan 2025</span><span class="news-text">Three papers accepted by ACC 2025, including one oral.</span></li>
+      <li class="news-extra"><span class="news-date">Dec 2024</span><span class="news-text">Passed the qualification exam. I am now officially a PhD candidate!</span></li>
+      <li class="news-extra"><span class="news-date">Sep 2024</span><span class="news-text">One paper accepted by Humanoids 2024.</span></li>
+      <li class="news-extra"><span class="news-date">Sep 2024</span><span class="news-text">One paper accepted by CoRL 2024.</span></li>
+      <li class="news-extra"><span class="news-date">Jul 2024</span><span class="news-text">Received student travel award from AIM 2024.</span></li>
+      <li class="news-extra"><span class="news-date">Apr 2024</span><span class="news-text">Two papers accepted by AIM 2024.</span></li>
+      <li class="news-extra"><span class="news-date">Jan 2024</span><span class="news-text">One paper accepted by ACC 2024.</span></li>
+    </ul>
+    <button class="toggle-btn" id="news-toggle" onclick="toggleNews()">Show more</button>
   </div>
 </div>
 
-<!-- <div class="row g-5 mb-5">
+<div class="row g-5 mb-5">
   <div class="col-md-12">
-    <h3 class="fw-bold border-bottom pb-3 mb-5">News</h3>
-    <p><b>Dec 11, 2024 -</b> Passed the qualification exam. I am now officially a PhD candidate!</p>
-    <p><b>Sep 9, 2024 -</b> One paper accepted by Humanoid 2024.</p>
-    <p><b>Sep 5, 2024 -</b> One paper accepted by CoRL 2024.</p>
-    <p><b>Jul 13, 2024 -</b> Received student travel award from AIM 2024.</p>
-    <p><b>Apr 21, 2024 -</b> Two paper accepted by AIM 2024.</p>
-    <p><b>Jan 22, 2024 -</b> One paper accepted by ACC 2024.</p>
+    <h3 class="section-heading">Experience</h3>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-logo">
+          <img src="{{ site.github.url }}/assets/img/adi_logo.webp" alt="Analog Devices">
+        </div>
+        <div class="exp-info">
+          <div class="exp-company">Analog Devices, Inc. (ADI)</div>
+          <div class="exp-role">Research Intern · Dexterous AI Group</div>
+          <div class="exp-date">May 2026 – Present</div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo">
+          <img src="{{ site.github.url }}/assets/img/merl_logo.png" alt="Mitsubishi Electric">
+        </div>
+        <div class="exp-info">
+          <div class="exp-company">Mitsubishi Electric Research Laboratories (MERL)</div>
+          <div class="exp-role">Research Intern</div>
+          <div class="exp-date">Jan 2026 – May 2026 &nbsp;·&nbsp; May 2025 – Aug 2025</div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div> -->
+</div>
 
 {% include publications.html %}
+
+<script>
+// News toggle
+var newsExpanded = false;
+function toggleNews() {
+  newsExpanded = !newsExpanded;
+  document.querySelectorAll('.news-extra').forEach(function(el) {
+    el.style.display = newsExpanded ? 'flex' : 'none';
+  });
+  var btn = document.getElementById('news-toggle');
+  btn.textContent = newsExpanded ? 'Show less' : 'Show more';
+  btn.classList.toggle('expanded', newsExpanded);
+}
+// Init: hide extra news
+document.querySelectorAll('.news-extra').forEach(function(el) {
+  el.style.display = 'none';
+});
+
+// Publications toggle
+var pubExpanded = false;
+function togglePub() {
+  pubExpanded = !pubExpanded;
+  document.querySelectorAll('.pub-collab').forEach(function(el) {
+    el.style.display = pubExpanded ? 'list-item' : 'none';
+  });
+  // Show/hide year headings that have no visible items
+  document.querySelectorAll('.pub-year').forEach(function(yearEl) {
+    var sibling = yearEl.nextElementSibling;
+    var hasVisible = false;
+    while (sibling && sibling.classList.contains('pub-list')) {
+      sibling.querySelectorAll('.pub-item').forEach(function(item) {
+        if (item.style.display !== 'none') hasVisible = true;
+      });
+      sibling = sibling.nextElementSibling;
+    }
+    yearEl.style.display = hasVisible ? '' : 'none';
+  });
+  var pbtn = document.getElementById('pub-toggle');
+  pbtn.textContent = pubExpanded ? 'Show less' : 'Show all publications';
+  pbtn.classList.toggle('expanded', pubExpanded);
+}
+// Init: hide collab pubs and check year headings
+document.querySelectorAll('.pub-collab').forEach(function(el) {
+  el.style.display = 'none';
+});
+document.querySelectorAll('.pub-year').forEach(function(yearEl) {
+  var sibling = yearEl.nextElementSibling;
+  var hasVisible = false;
+  while (sibling && sibling.classList.contains('pub-list')) {
+    sibling.querySelectorAll('.pub-item:not(.pub-collab)').forEach(function() {
+      hasVisible = true;
+    });
+    sibling = sibling.nextElementSibling;
+  }
+  yearEl.style.display = hasVisible ? '' : 'none';
+});
+</script>

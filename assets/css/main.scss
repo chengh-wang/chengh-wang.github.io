@@ -1,4 +1,332 @@
 ---
 ---
 
-// @import "main";
+$accent:     #2563eb;
+$accent-mid: #1d4ed8;
+$purple:     #7c3aed;
+$text:       #1a1a1a;
+$muted:      #6b7280;
+$border:     #e5e7eb;
+$bg:         #f9fafb;
+$card-bg:    #ffffff;
+$tag-bg:     #eff6ff;
+$tag-color:  #1d4ed8;
+
+// Base
+html { scroll-behavior: smooth; }
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.97rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: $accent-mid;
+  text-decoration: underline;
+}
+
+// Layout
+.col-lg-8 {
+  max-width: 840px;
+  background: $card-bg;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.04);
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  padding: 2.5rem 3rem !important;
+}
+
+// Header
+header {
+  border-bottom: 1.5px solid $border !important;
+  padding-bottom: 1.25rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.site-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  background: linear-gradient(90deg, $accent, $purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header nav a {
+  color: $muted !important;
+  font-weight: 500;
+  font-size: 0.92rem !important;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: $accent !important;
+  border-bottom-color: $accent;
+  text-decoration: none;
+}
+
+// Section headings
+.section-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, $accent, $purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 1.5px solid $border;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+// Bio / hero
+.bio-text {
+  font-size: 0.96rem;
+  color: #374151;
+  line-height: 1.85;
+}
+
+.headshot {
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  width: 68%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  border: 4px solid $card-bg;
+  outline: 2px solid $border;
+}
+
+// Social icons
+.social-icons {
+  margin-top: 1.1rem;
+}
+
+.social-icons a {
+  color: $muted !important;
+  font-size: 1.3rem;
+  margin-right: 0.9rem;
+  transition: color 0.15s, transform 0.15s;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  color: $accent !important;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+// News
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid $border;
+  align-items: baseline;
+  font-size: 0.94rem;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $tag-color;
+  background: $tag-bg;
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+.news-text { color: #374151; }
+
+// Publications — year groups
+.pub-year {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $text;
+  margin: 1.75rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid $border;
+}
+
+.pub-year:first-child { margin-top: 0; }
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-item {
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.4rem;
+  border-left: 3px solid $border;
+  border-radius: 0 6px 6px 0;
+  background: transparent;
+  transition: border-color 0.18s, background 0.18s;
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: #374151;
+}
+
+.pub-item:hover {
+  border-left-color: $accent;
+  background: #f0f6ff;
+}
+
+.pub-item b { color: $text; }
+
+.pub-venue {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: $tag-color;
+  background: $tag-bg;
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  letter-spacing: 0.02em;
+}
+
+.pub-status {
+  font-size: 0.78rem;
+  color: $muted;
+  font-style: italic;
+}
+
+// Experience
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.exp-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid $border;
+  border-radius: 10px;
+  background: $card-bg;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.exp-item:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+}
+
+.exp-logo {
+  flex-shrink: 0;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-logo img {
+  width: 100%;
+  height: 40px;
+  object-fit: contain;
+}
+
+.exp-company {
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: $text;
+}
+
+.exp-role {
+  font-size: 0.86rem;
+  color: $muted;
+  margin-top: 0.1rem;
+}
+
+.exp-date {
+  font-size: 0.78rem;
+  color: $tag-color;
+  background: $tag-bg;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+  margin-top: 0.3rem;
+}
+
+// Toggle buttons
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: $accent;
+  background: $tag-bg;
+  border: 1px solid #bfdbfe;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.toggle-btn:hover {
+  background: #dbeafe;
+  border-color: $accent;
+  color: $accent-mid;
+}
+
+.toggle-btn::after {
+  content: " ↓";
+  font-size: 0.75rem;
+}
+
+.toggle-btn.expanded::after {
+  content: " ↑";
+}
+
+// Footer
+footer {
+  border-top: 1.5px solid $border !important;
+}
+
+footer .social-media-icons a {
+  color: $muted !important;
+  font-size: 1.05rem;
+  transition: color 0.15s;
+}
+
+footer .social-media-icons a:hover {
+  color: $accent !important;
+  text-decoration: none;
+}

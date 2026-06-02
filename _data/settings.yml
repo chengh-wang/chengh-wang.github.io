@@ -1,7 +1,6 @@
 menu:
 # - {name: 'courses', url: '/courses'}
 - {name: 'About', url: '/'}
-- {name: 'Publications', url: '/publications'}
 # - {name: 'Video Gallery', url: '/video_gallery'}
 # - {name: 'contact', url: '/contact'}
 
