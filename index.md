@@ -3,5 +3,5 @@ layout: home
 title: "Home"
 ---
 
-I am currently a Ph.D. candidate in Computer Engineering at Northeastern University under the supervision of Prof. Alireza Ramezani. My research interests lie at the intersection of optimal control, deep learning, locomotion, and hardware. My long-term goal is to investigate action, perception, and learning as an integrated loop, developing agile, robust controls for polyarticular mechanisms thus achieve human-level athletic intelligence.
+I am a final-year Ph.D. candidate in Computer Engineering at Northeastern University, where I work with Prof. Alireza Ramezani. My research interests lie at the intersection of robotics, machine learning, and hardware — particularly policy design that enables polyarticular mechanisms to achieve agile physical behavior. My long-term goal is to develop agile, intelligent, and robust controls that ultimately achieve and surpass human-level intelligence.
 

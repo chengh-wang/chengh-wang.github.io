@@ -19,10 +19,10 @@ layout: default
 <div class="row g-5 mb-5">
   <div class="col-md-12">
     <h3 class="section-heading">News</h3>
-    <ul class="news-list" id="news-list">
+    <ul class="news-list">
       <li><span class="news-date">May 2026</span><span class="news-text">Start my internship at Dexterous AI Group at Analog Devices (ADI).</span></li>
       <li><span class="news-date">Jan 2026</span><span class="news-text">Start my internship at Mitsubishi Electric Research Laboratories (MERL).</span></li>
-      <li><span class="news-date">Oct 2025</span><span class="news-text">Delivered two oral presentations at IROS 2025, Hangzhou, China (Oct. 22, 2025).</span></li>
+      <li><span class="news-date">Oct 2025</span><span class="news-text">Delivered two oral presentations at IROS 2025.</span></li>
       <li><span class="news-date">Jun 2025</span><span class="news-text">Two papers accepted by IROS 2025.</span></li>
       <li><span class="news-date">Jun 2025</span><span class="news-text">One paper accepted by RA-L.</span></li>
       <li><span class="news-date">May 2025</span><span class="news-text">Start my internship at Mitsubishi Electric Research Laboratories (MERL).</span></li>
@@ -72,7 +72,6 @@ layout: default
 {% include publications.html %}
 
 <script>
-// News toggle
 var newsExpanded = false;
 function toggleNews() {
   newsExpanded = !newsExpanded;
@@ -83,47 +82,7 @@ function toggleNews() {
   btn.textContent = newsExpanded ? 'Show less' : 'Show more';
   btn.classList.toggle('expanded', newsExpanded);
 }
-// Init: hide extra news
 document.querySelectorAll('.news-extra').forEach(function(el) {
   el.style.display = 'none';
-});
-
-// Publications toggle
-var pubExpanded = false;
-function togglePub() {
-  pubExpanded = !pubExpanded;
-  document.querySelectorAll('.pub-collab').forEach(function(el) {
-    el.style.display = pubExpanded ? 'list-item' : 'none';
-  });
-  // Show/hide year headings that have no visible items
-  document.querySelectorAll('.pub-year').forEach(function(yearEl) {
-    var sibling = yearEl.nextElementSibling;
-    var hasVisible = false;
-    while (sibling && sibling.classList.contains('pub-list')) {
-      sibling.querySelectorAll('.pub-item').forEach(function(item) {
-        if (item.style.display !== 'none') hasVisible = true;
-      });
-      sibling = sibling.nextElementSibling;
-    }
-    yearEl.style.display = hasVisible ? '' : 'none';
-  });
-  var pbtn = document.getElementById('pub-toggle');
-  pbtn.textContent = pubExpanded ? 'Show less' : 'Show all publications';
-  pbtn.classList.toggle('expanded', pubExpanded);
-}
-// Init: hide collab pubs and check year headings
-document.querySelectorAll('.pub-collab').forEach(function(el) {
-  el.style.display = 'none';
-});
-document.querySelectorAll('.pub-year').forEach(function(yearEl) {
-  var sibling = yearEl.nextElementSibling;
-  var hasVisible = false;
-  while (sibling && sibling.classList.contains('pub-list')) {
-    sibling.querySelectorAll('.pub-item:not(.pub-collab)').forEach(function() {
-      hasVisible = true;
-    });
-    sibling = sibling.nextElementSibling;
-  }
-  yearEl.style.display = hasVisible ? '' : 'none';
 });
 </script>
