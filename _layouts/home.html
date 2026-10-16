@@ -9,22 +9,32 @@ layout: default
       <span><i class="fas fa-map-marker-alt"></i> Boston, MA, USA</span>
       <a href="mailto:wang.chengh@northeastern.edu"><i class="fas fa-envelope"></i> wang.chengh@northeastern.edu</a>
     </div>
-    <div class="social-icons">
+  </div>
+  <div class="col-md-6 profile-column d-flex flex-column align-items-center justify-content-center">
+    <img src="https://raw.githubusercontent.com/chengh-wang/chengh-wang.github.io/main/assets/img/IMG_1132.JPG" alt="Chenghao Wang" class="headshot">
+    <div class="social-icons profile-socials">
       {% for item in site.data.settings.social %}
-      <a href="{{ item.link }}"><i class="fab fa-{{ item.icon }}"></i></a>
+      <a href="{{ item.link }}" aria-label="{{ item.icon }}"><i class="fab fa-{{ item.icon }}"></i></a>
       {% endfor %}
     </div>
   </div>
-  <div class="col-md-6 text-end">
-    <img src="https://raw.githubusercontent.com/chengh-wang/chengh-wang.github.io/main/assets/img/IMG_1132.JPG" alt="Chenghao Wang" class="headshot">
-  </div>
 </div>
+
+<section class="mb-5" aria-labelledby="highlight-heading">
+  <h3 class="section-heading" id="highlight-heading">Research Highlight</h3>
+  <div class="research-highlights">
+    <img class="highlight-gif" src="{{ '/assets/gifs/highlight-locomotion.gif' | relative_url }}" width="480" height="270" alt="Legged robot locomotion demonstration">
+    <img class="highlight-gif" src="{{ '/assets/gifs/highlight-humanoid.gif' | relative_url }}" width="480" height="270" alt="Humanoid robot throwing a ball toward a target">
+    <img class="highlight-gif" src="{{ '/assets/gifs/highlight-manipulation.gif' | relative_url }}" width="480" height="270" alt="Robotic manipulation demonstration">
+  </div>
+</section>
 
 <div class="row g-5 mb-5">
   <div class="col-md-12">
     <h3 class="section-heading">News</h3>
     <ul class="news-list">
       <li><span class="news-date">May 2026</span><span class="news-text">Start my internship at Dexterous AI Group at Analog Devices (ADI).</span></li>
+      <li><span class="news-date">May 2026</span><span class="news-text">IEEE Robotics and Automation Letters (RA-L) Best Paper Honorable Mention</span></li>
       <li><span class="news-date">Jan 2026</span><span class="news-text">Start my internship at Mitsubishi Electric Research Laboratories (MERL).</span></li>
       <li><span class="news-date">Oct 2025</span><span class="news-text">Delivered two oral presentations at IROS 2025.</span></li>
       <li><span class="news-date">Jun 2025</span><span class="news-text">Two papers accepted by IROS 2025.</span></li>
@@ -54,7 +64,7 @@ layout: default
         <div class="exp-info">
           <div class="exp-company">Analog Devices, Inc. (ADI)</div>
           <div class="exp-role">Research Intern · Dexterous AI Group</div>
-          <div class="exp-date">May 2026 – Present</div>
+          <div class="exp-date">May 2026 - Aug 2026</div>
         </div>
       </div>
 
